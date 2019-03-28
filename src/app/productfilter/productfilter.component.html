@@ -1,0 +1,14 @@
+<div class="row">
+  <div *ngFor="let product of products| paginate: { itemsPerPage: 10, currentPage: p }"
+   class="col-md-6 flex flex-column text-center image__block">
+    <div class="bg flex-grow-1">
+      <img class="flex-grow-1" src="{{product.image}}" alt="{{product.name}}">
+    <p class="flex-grow-1">{{product.name}}</p>
+     <span *ngFor='let e of counter(5 -product.rating )' class="fa fa-star"></span>
+    <span *ngFor='let e of counter(product.rating)' class="fa fa-star checked"></span>
+      <p class="flex-grow-1">${{product.price}}</p>
+
+    </div>
+  </div>
+</div>
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>

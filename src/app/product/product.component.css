@@ -1,0 +1,9 @@
+.bg{
+  padding: 20px;
+}
+.image__block{
+   margin-bottom: 40px;
+  box-shadow: 7px -3px 20px #888888;
+  box-shadow: 4px 10px 5px #aaaaaa;
+border: 1px solid #BFBFBF;
+}

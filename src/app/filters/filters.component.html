@@ -1,0 +1,62 @@
+<fieldset>
+
+   <legend> filters</legend>
+   <div class="price__section flex-column">
+     <p>Price Range</p>
+
+     <div>
+       <span>form ($)</span><span>to ($)</span>
+     </div>
+     <div class="price__line">
+       <hr>
+     </div>
+   </div>
+
+
+   <div class="color__section flex-column">
+     <form>
+       <p>Color</p>
+         <input (keyup.enter)="selectColor(color)"
+          class="form-control" #color type="text" name="color" placeholder="enter color">
+         <div class="checkboxs">
+           <div class="color">
+             <input (click)="selectColor(color)" type="checkbox" name="red" #color>
+             <span>red</span>
+          </div>
+          <div class="color">
+             <input (click)="selectColor(color)" type="checkbox" name="green" #color>
+             <span>green</span>
+         </div>
+         <div class="color">
+             <input (click)="selectColor(color)" type="checkbox" name="yellow" #color>
+             <span>yellow</span>
+         </div>
+         <div class="color">
+             <input (click)="selectColor(color)" type="checkbox" name="balck"  #color>
+             <span>balck</span>
+         </div>
+
+         </div>
+         <div (click)="remove()" class="clear">x clear</div>
+     </form>
+
+   </div>
+<div class="reating">
+  <h2>Avarge Rating</h2>
+<span *ngFor="let i of counter(5)" class="fa fa-star checked"></span><br>
+<span *ngFor="let i of counter(4)" class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<span *ngFor="let i of counter(3)" class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span><br>
+<span *ngFor="let i of counter(2)" class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span><br>
+<span *ngFor="let i of counter(1)" class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span><br>
+</div>
+</fieldset>
