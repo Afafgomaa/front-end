@@ -176,8 +176,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//import { category} from './catgory_model';
-//import {CategoriesService} from './categories.service';
 var CategoriesComponent = /** @class */ (function () {
     function CategoriesComponent(http) {
         this.http = http;
@@ -187,7 +185,10 @@ var CategoriesComponent = /** @class */ (function () {
         var _this = this;
         this.http.get(this.url).subscribe(function (a) {
             _this.categoires = a;
-        });
+            console.log('login' + a.login);
+            console.log('bio' + a.bio);
+            console.log('company' + a.company);
+        }, function (err) { console.log('Error occured'); });
     };
     CategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
